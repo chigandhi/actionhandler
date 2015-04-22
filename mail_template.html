@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Did you enjoy Google Cafe?</title>
+  </head>
+  <body>
+    <span itemscope itemtype="http://schema.org/Restaurant">
+      <meta itemprop="name" content="Google Cafe"/>
+      <span itemprop="action" itemscope itemtype="http://schema.org/ReviewAction">
+        <span itemprop="review" itemscope itemtype="http://schema.org/Review">
+          <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+            <meta itemprop="bestRating" content="5"/>
+            <meta itemprop="worstRating" content="1"/>
+          </span>
+        </span>
+        <span itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+          <meta itemprop="url" content="{{ review_url }}"/>
+          <link itemprop="encoding" href="http://schema.org/Encoding/UrlEncoded"/>
+          <link itemprop="method" href="http://schema.org/HttpRequestMethod/POST"/>
+          <span itemprop="requiredProperty" itemscope itemtype="http://schema.org/Property">
+            <meta itemprop="name" content="review.reviewRating.ratingValue"/>
+          </span>
+          <span itemprop="optionalProperty" itemscope itemtype="http://schema.org/Property">
+            <meta itemprop="name" content="review.reviewBody"/>
+          </span>
+        </span>
+      </span>
+    </span>
+    <p>
+      Dear John, please rate Google Cafe between 1 and 5 stars and, optionally, add a text comment.
+    </p>
+  </body>
+</html>
